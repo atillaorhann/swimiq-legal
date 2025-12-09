@@ -1,36 +1,195 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SwimIQ | Legal</title>
-    <style>
-      body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#e2e8f0}
-      .wrap{max-width:820px;margin:0 auto;padding:48px 20px}
-      h1{margin:0 0 8px;font-size:32px;color:#fff}
-      p{margin:0 0 24px;color:#94a3b8}
-      a{color:#38bdf8;text-decoration:none}
-      .card{background:#1e293b;border:1px solid #334155;border-radius:16px;padding:18px;margin:12px 0}
-      .card:hover{border-color:#38bdf8}
-      .small{font-size:12px;color:#64748b;margin-top:28px}
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>SwimIQ</h1>
-      <p>Yasal metinler</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SwimIQ — Akıllı Yüzme Asistanı</title>
+  <meta name="description" content="SwimIQ; antrenman planlama, gelişim takibi ve teknik gelişim odaklı akıllı yüzme asistanıdır. Düzenli güncellemelerle sürekli gelişir." />
+  <meta name="theme-color" content="#0f172a" />
 
+  <!-- Basit sosyal paylaşım -->
+  <meta property="og:title" content="SwimIQ — Akıllı Yüzme Asistanı" />
+  <meta property="og:description" content="Antrenman planla, ilerlemeni takip et, teknik gelişimini destekle. SwimIQ düzenli güncellemelerle büyür." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:rgba(30,41,59,.55);
+      --border:rgba(148,163,184,.22);
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --brand:#38bdf8;
+      --brand2:#0ea5e9;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(56,189,248,.18), transparent 55%),
+        radial-gradient(700px 500px at 80% 20%, rgba(14,165,233,.16), transparent 60%),
+        linear-gradient(180deg, #071022, var(--bg));
+      min-height:100vh;
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:48px 20px 32px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background: rgba(56,189,248,.10);
+      border:1px solid var(--border);
+      display:grid;place-items:center;
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover}
+    .name{font-weight:900;letter-spacing:.2px;font-size:22px}
+    .badge{
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--border);
+      padding:6px 10px;border-radius:999px;
+      background:rgba(15,23,42,.35);
+      white-space:nowrap;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:14px;
+    }
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:.2px}
+    p{margin:0 0 14px;color:var(--muted);line-height:1.55}
+    .bullets{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .bullets li{
+      display:flex;gap:10px;align-items:flex-start;
+      color:#cbd5e1;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      margin-top:6px;flex:0 0 auto;
+      box-shadow: 0 0 0 4px rgba(56,189,248,.10);
+    }
+    .ctaRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(15,23,42,.35);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--brand2), var(--brand));
+      border-color: rgba(56,189,248,.35);
+      color:#06101c;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .small{font-size:12px;color:var(--muted);margin-top:10px}
+    .sideTitle{font-weight:800;margin:0 0 10px;font-size:16px}
+    .kv{display:grid;gap:10px;margin-top:10px}
+    .kv .item{
+      padding:12px 12px;border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(15,23,42,.28);
+    }
+    .kv .k{font-size:12px;color:var(--muted)}
+    .kv .v{font-size:14px;color:#e2e8f0;margin-top:4px}
+    footer{
+      margin-top:18px;
+      display:flex;flex-wrap:wrap;gap:12px;
+      align-items:center;justify-content:space-between;
+      color:var(--muted);
+      font-size:12px;
+    }
+    footer a{color:var(--brand);text-decoration:none}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <!-- İstersen bu görseli repo köküne koyup yolunu değiştir: ./app-logo.png -->
+          <img src="https://swimiq.app/assets/app-logo.png" alt="SwimIQ" onerror="this.style.display='none'">
+        </div>
+        <div class="name">SwimIQ</div>
+      </div>
+      <div class="badge">Akıllı Yüzme Asistanı</div>
+    </header>
+
+    <section class="hero">
       <div class="card">
-        <a href="/privacy"><strong>Gizlilik Politikası</strong></a>
-        <div class="small">Kişisel veriler, izinler, saklama ve iletişim.</div>
+        <h1>Yüzme gelişiminizi sistemli şekilde yönetin.</h1>
+        <p>
+          SwimIQ; antrenman planlama, gelişim takibi ve teknik gelişim odağında tasarlanmış bir yüzme asistanıdır.
+          Hedefimiz, sporcu–antrenör etkileşimini sadeleştirerek performans gelişimini daha ölçülebilir hâle getirmektir.
+        </p>
+
+        <ul class="bullets">
+          <li><span class="dot"></span><span><b>Antrenman & program yönetimi:</b> Antrenmanlarınızı kaydedin, planlayın ve düzenli takip edin.</span></li>
+          <li><span class="dot"></span><span><b>Gelişim özetleri:</b> Haftalık/aylık toplamlar, tutarlılık ve trendleri tek ekranda görün.</span></li>
+          <li><span class="dot"></span><span><b>Teknik gelişim odağı:</b> Drill/egzersiz kütüphanesi ve geri bildirim akışlarını destekler.</span></li>
+          <li><span class="dot"></span><span><b>Sürekli güncelleme:</b> Yeni özellikler ve iyileştirmeler için güncellemeleri takipte kalın.</span></li>
+        </ul>
+
+        <div class="ctaRow">
+          <!-- App Store linkin hazır olunca buraya koy -->
+          <a class="btn primary" href="#" onclick="alert('App Store bağlantısı yakında eklenecek.'); return false;">Uygulamayı İndir</a>
+          <a class="btn" href="/privacy/">Gizlilik Politikası</a>
+          <a class="btn" href="/terms/">Kullanım Koşulları</a>
+        </div>
+
+        <div class="small">
+          Not: SwimIQ düzenli olarak güncellenir. Geri bildirimleriniz ürünün gelişiminde belirleyicidir.
+        </div>
       </div>
 
       <div class="card">
-        <a href="/terms"><strong>Kullanım Koşulları</strong></a>
-        <div class="small">Hizmet şartları, sorumluluklar ve kullanım kuralları.</div>
-      </div>
+        <div class="sideTitle">İletişim & Destek</div>
+        <p>Uygulama hakkında soru, öneri ve hata bildirimleri için:</p>
 
-      <div class="small">© SwimIQ</div>
-    </div>
-  </body>
+        <div class="kv">
+          <div class="item">
+            <div class="k">E-posta</div>
+            <div class="v"><a href="mailto:support@swimiq.app" style="color:#38bdf8;text-decoration:none">support@swimiq.app</a></div>
+          </div>
+          <div class="item">
+            <div class="k">Güncellemeler</div>
+            <div class="v">Yeni özellikleri görmek için sürüm notlarını ve duyuruları takip edin.</div>
+          </div>
+          <div class="item">
+            <div class="k">Şeffaflık</div>
+            <div class="v">Veri işleme, izinler ve kullanım kuralları için ilgili sayfalara bakın.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> SwimIQ</div>
+      <div>
+        <a href="/privacy/">Privacy</a> ·
+        <a href="/terms/">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
